@@ -1,0 +1,4 @@
+execute_on_song_change = pkill -RTMIN+20 dwmblocks 
+execute_on_player_state_change = pkill -RTMIN+20 dwmblocks 
+playlist_display_mode = "classic"
+song_list_format = "{$6{%t}{$R$7%l}}"

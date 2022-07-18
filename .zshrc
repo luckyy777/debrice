@@ -48,13 +48,13 @@ alias ytdlmp3='yt-dlp -x --audio-format mp3'
 alias sx='startx'
 alias btop='btop --utf-force'
 alias ls='ls --color=auto'
-alias up='sudo apt update && sudo apt upgrade'
+alias up='yay -Syyu'
 alias cvd='civ-v-drafter'
 alias todo='nvim ~/documents/todo'
-
-alias service='sudo service'
-alias reboot='sudo reboot'
-alias shutdown='sudo shutdown'
+alias clearcache='sudo bash ~/.local/bin/clearcache.sh'
+alias lowpower='sudo cpupower frequency-set --governor conservative'
+alias highpower='sudo cpupower frequency-set --governor performance'
+alias powersaver='sudo cpupower frequency-set --governor powersave'
 
 temp(){
 	all="$(sensors)"
@@ -68,5 +68,5 @@ temp(){
 }
 
 export PATH=$HOME"/platform-tools:$PATH"
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

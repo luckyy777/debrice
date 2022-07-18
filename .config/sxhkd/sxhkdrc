@@ -24,42 +24,21 @@ super + shift + s
 
 # play/pause
 super + F1
-	playerctl --player=mpd play-pause; pkill -RTMIN+20 dwmblocks
+	playerctl --player=mpd play-pause
 
 # previous
 super + F2
-	playerctl --player=mpd previous; pkill -RTMIN+20 dwmblocks
+	playerctl --player=mpd previous
 
 # next
 super + F3
-	playerctl --player=mpd next; pkill -RTMIN+20 dwmblocks
+	playerctl --player=mpd next
 
 # stop
 super + F4
-	playerctl --player=mpd stop; pkill -RTMIN+20 dwmblocks
+	playerctl --player=mpd stop
 
-### hardware keys ###
-
-# volume up / down
-XF86Audio{Raise,Lower}Volume
-	pamixer {-i,-d}5; pkill -RTMIN+10 dwmblocks
-
-XF86AudioMute
-	pamixer -t; pkill -RTMIN+10 dwmblocks
-
-XF86MonBrightnessUp
-    brightnessctl set +10%; pkill -RTMIN+30 dwmblocks
-
-XF86MonBrightnessDown
-    brightnessctl set 10%-; pkill -RTMIN+30 dwmblocks
-
-super + l
-	xsecurelock
-
-# opening shit
-super + d
-	dmenu_run
-
+## opening shit ##
 super + Return
 	WINIT_X11_SCALE_FACTOR=1.66 alacritty
 
@@ -76,4 +55,4 @@ super + shift + g
 	polymc
 
 super + p
-	WINIT_X11_SCALE_FACTOR=1.66 alacritty -e ncmpcpp
+	mpdevil
